@@ -1,0 +1,15 @@
+.cat {
+    width: 200px;
+    float: left;
+}
+
+
+.selectedCat {
+    float:right;
+}
+
+.catImage{
+    float:left;
+    width: 400px;
+    height: 400px;
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Cat Clicker</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body ng-app="catClicker">
+    <h3> Cat Clicker </h3>
+    <div ng-controller="CatsController as cc">
+        <div class="cat">
+            <ul>
+                <li ng-repeat="cat in cc.cats track by $index" ng-click="cc.selectCat(cat)">
+                    {{cat.name}}
+                </li>
+            </ul>
+        </div>
+        <div class="selectedCat" ng-if="cc.selectedCat">
+            <p>
+                <strong>Name: </strong> {{cc.selectedCat.name}}
+            </p>
+            <img class="catImage" ng-src="{{cc.selectedCat.imgSrc}}" ng-click="cc.incrementClickCount(cc.selectedCat)" />
+            <P>You clicked {{cc.selectedCat.clicks}} time(s)</p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./assets/js/vendor/angular.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+    <script type="text/javascript" src="./assets/js/controllers/catsController.js"></script>
+</body>
+
+</html>

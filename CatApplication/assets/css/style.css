@@ -1,0 +1,29 @@
+.cat {
+    width: 200px;
+    float: left;
+}
+
+
+.selectedCat {
+    float:right;
+}
+
+.cat-image{
+    float:left;
+    width: 400px;
+    height: 400px;
+}
+
+todo-indicator-badge {
+    background-color: #fa3e3e;
+    border-radius: 9px;
+    color: white;
+    min-width: 26px;
+    height: 18px;
+    text-align: center;
+    font-size: 12px!important;
+    padding: 1px 3px;
+    position: absolute;
+    top: 8px;
+    right: -5px;
+}

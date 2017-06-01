@@ -36,6 +36,7 @@
             </p>
             <img class="cat-image" ng-src="{{cc.selectedCat.imgSrc}}" ng-click="cc.incrementClickCount(cc.selectedCat)" />
             <P>You clicked {{cc.selectedCat.clicks}} time(s)</p>
+            <input type="number" ng-model="cc.selectedCat.clicks"/>
         </div>
     </div>
 

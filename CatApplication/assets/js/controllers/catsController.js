@@ -5,27 +5,27 @@
         vm.selectedOrder = 'name';
         cats = [{
             name: 'First Cat',
-            imgSrc: './assets/images/first_cat.jpg',
+            imgUrl: './assets/images/first_cat.jpg',
             clicks: 0,
             isVisited: false
         }, {
             name: 'Second Cat',
-            imgSrc: './assets/images/second_cat.jpg',
+            imgUrl: './assets/images/second_cat.jpg',
             clicks: 0,
             isVisited: false
         }, {
             name: 'Third Cat',
-            imgSrc: './assets/images/third_cat.jpg',
+            imgUrl: './assets/images/third_cat.jpg',
             clicks: 0,
             isVisited: false
         }, {
             name: 'Fourth Cat',
-            imgSrc: './assets/images/fourth_cat.jpg',
+            imgUrl: './assets/images/fourth_cat.jpg',
             clicks: 0,
             isVisited: false
         }, {
             name: 'Fifth Cat',
-            imgSrc: './assets/images/fifth_cat.jpg',
+            imgUrl: './assets/images/fifth_cat.jpg',
             clicks: 0,
             isVisited: false
         }]

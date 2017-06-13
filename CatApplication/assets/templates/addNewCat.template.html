@@ -1,0 +1,24 @@
+<div ng-controller="AddCatsController as acc" ng-cloak>
+    <div>
+        <form name="addNewCat">
+            <div class="form-group">
+                <label for="name">Cat Name:</label>
+                <input type="text" name="name" ng-model="acc.name" required>
+                <p ng-show="newCatForm.name.$touched && newCatForm.name.$error.required">Name is mandatory</p>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Cat URL:</label>
+                <input type="text" name="url" ng-model="acc.url" required validate-cat-url ng-model-options="{ allowInvalid: true, updateOn: 'blur' }" />
+                <div ng-show="newCatForm.url.$touched">
+                    <p ng-show="newCatForm.url.$error.required">URL is mandatory</p>
+                    <p ng-show="newCatForm.url.$error.invalidUrl">Please enter a valid URL</p>
+                </div>
+            </div>
+            <div>
+                <img ng-src="{{nc.url}}" ng-if="nc.url && !addNewCat.url.$error.invalidUrl" alt="Cat Pic Here" />
+            </div>
+            <button>Cancel</button>
+            <button ng-disabled="addNewCat.$invalid">Save</button>
+        </form>
+    </div>
+</div>

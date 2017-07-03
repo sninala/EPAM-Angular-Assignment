@@ -1,5 +1,5 @@
 (function () {
-    var app = angular.module('catsApp', ['ui.router']);
+    var app = angular.module('catsApp', ['ui.router', 'ngCookies']);
     app.config(function ($urlRouterProvider, $stateProvider) {
         $urlRouterProvider.otherwise('/');
         $stateProvider

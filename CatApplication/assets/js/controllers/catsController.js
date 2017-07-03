@@ -1,6 +1,6 @@
 (function () {
     "use strict";
-    var CatsController = function ($filter, $cookieStore, CatsService) {
+    var CatsController = function ($filter, $cookies, CatsService) {
         var vm = this, cats;
         vm.selectedCat = null;
         vm.selectedOrder = 'name';
@@ -9,13 +9,13 @@
 
         vm.incrementClickCount = function (cat) {
             var count = cat.clicks++;
-            $cookieStore.put(cat.name, count);
+            $cookies.put(cat.name, count);
   
         }
         vm.selectCat = function (cat) {
             vm.selectedCat = cat;
             vm.selectedCat.isVisited = true;
-            var clickCount = $cookieStore.get(cat.name);
+            var clickCount = $cookies.get(cat.name);
             if(clickCount) {
                 vm.selectCat.clicks = clickCount;
             }

@@ -1,6 +1,6 @@
 (function(){
     "use strict";
-    var CatsService = function(){
+    var CatsService = function($http, $q){
         var cats = [{
             name: 'First Cat',
             imgUrl: './assets/images/first_cat.jpg',

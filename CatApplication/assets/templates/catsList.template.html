@@ -1,7 +1,7 @@
 <div ng-controller="CatsController as cc">
     <a ui-sref="addNewCat">Add New Cat</a>
     <div>
-        Search: <input type="text" placeholder="Enter Name" ng-model="cc.searchText">
+        Search: <input type="text" placeholder="Enter Name" ng-model="cc.searchText" focus>
         <button ng-click="cc.searchCats()"> Search </button>
     </div>
 
